@@ -1,0 +1,62 @@
+
+/* skip to main styling  */
+.skip {
+  position:absolute;
+  top: -40px;   
+}
+.skip:focus{
+  top: 0;
+  position: absolute;  
+  background-color: #a8c7a8;
+  color:white;
+}
+
+/* nav bar styling  */
+nav li{
+    display:inline;
+    padding-right:1rem;
+    padding-left: 1rem;
+    
+
+    border-right: 1px solid white;
+    
+  }
+  
+  nav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none; 
+    
+    
+  }
+/* this should make the link scroll nicely  */
+  html {
+    font-family: 'Mali';
+    scroll-behavior: smooth;
+  }
+
+  nav{
+    background-color: #a8c7a8;
+    padding: 25px 0; 
+    text-align: left;
+    
+  }
+  .open{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 20fr;
+    gap: 10px;
+    background-color: #a8c7a8;
+    align-items: center;
+  }
+  .open > h1{
+    grid-column: 2/span 1;
+    color:white;
+   font-size: 130%;
+   
+
+  }
+  .open > img{
+    grid-column: 1/span 1;
+    max-height: 100px;
+  }
