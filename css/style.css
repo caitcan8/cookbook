@@ -42,6 +42,7 @@ nav li{
     color:#555555;
 
   }
+  
   main img{
     max-width: 80%;
   }
@@ -73,12 +74,36 @@ nav li{
     grid-column: 1/span 1;
     max-height: 100px;
   }
+
   #main{
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-row-gap: 15px;
     grid-column-gap: 15px;
+    
   }
+  body{
+    background-color: #ffeffb;
+  }
+  /* Scroll to Top Code taken and modified from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 2vh; /* Place the button at the bottom of the page */
+  right: 1.2vw; /* Place the button 30px from the right */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #a8c7a8; 
+  color: #555555; 
+  padding: 1.75vw; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size:115%;
+  z-index: 999;
+}
+
+#myBtn:hover {
+  text-decoration: underline; 
+}
   #appetizers{
     grid-row: 1/span 1;
     grid-column: 2/span 1;
@@ -91,21 +116,31 @@ nav li{
     grid-row: 3/span 1;
     grid-column: 2/span 1;
   }
+  #message{
+    grid-row: 4/span 1;
+    grid-column: 2/span 1;
+  }
   h2{
     display: flex;
     justify-content: center;
     font-size: 200%;
-    padding: 6vh;
+    padding: 3vh;
   }
     .appgallery, .entreegallery, .dessertgallery {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    
   } 
   
   .app,.entree,.dessert{
     display: flex;
     flex-direction: row;
-    margin-right: 7%;
+    margin-top: 8%;
+    margin-right: 5%;
+    margin-left: 5%;
+    
   }
    
 /* card animation inspired by https://codepen.io/william-goldsworthy/pen/JzVajj */
@@ -114,8 +149,8 @@ nav li{
   flex-direction: column;
   /* height: 280px;
   width: 200px; */
-  height:50vh;
-  width: 18vw;
+  height:30vh;
+  width: 45vw;
   /* width: 20vh; */
   background-color: white;
   border-radius: 20px;
@@ -127,8 +162,15 @@ nav li{
   left: 0px;
   justify-content: center;
   align-items:center;
+  padding: 1.2rem;
+  overflow: scroll;
 }
-
+ol > li{
+  font-size:100%;
+}
+.entree > div > ol > li{
+  font-size:70%;
+}
 
 .app > div:hover, .entree > div:hover, .dessert > div:hover, .app > div:focus, .entree > div:focus, .dessert > div:focus {
   transform: translateY(-40px)scale(1.1);
@@ -150,15 +192,68 @@ nav li{
 }
 .secondpage{
   z-index:3;
-  margin-left: -90px;
+  margin-left: -11rem;
   transform: scale(0.95);
 }
 .lastpage{
   z-index: 0;
-  margin-left: -90px;
+  margin-left: -11rem;
   transform: scale(0.9);
+ 
+
 }
 
+:focus {
+  z-index: 10;
+  /* transform: rotateY(180deg); */
+}
 
+/* change this to a javascript function where if its in focus it switches around the classes */
 
+.logos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
 
+}
+.logos > img{
+  width: 100%;
+}
+footer > p{
+  background-color: #a8c7a8;
+  font-size: 100%;
+  font-weight: 600;
+  color:#555555;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+/* added */
+@media(min-width: 900px){
+  .appgallery, .entreegallery, .dessertgallery {
+    display: flex;
+    flex-direction: row;
+    /* max-width: 100%; */
+  } 
+  .app > div,.entree > div, .dessert >div {
+  height:53vh;
+  width: 21vw;
+  }
+  .app,.entree,.dessert{
+    margin: 0;
+    margin-right: 5%;
+    
+  }
+  .activepage{
+    z-index:5;
+  }
+  .secondpage{
+    z-index:3;
+    margin-left: -20%;
+    transform: scale(0.95);
+  }
+  .lastpage{
+    z-index: 0;
+    margin-left: -20%;
+    transform: scale(0.9);
+  }
+}
