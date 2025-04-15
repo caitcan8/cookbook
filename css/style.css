@@ -227,16 +227,16 @@ footer > p{
   margin-top: 1rem;
   padding: 1rem;
 }
-/* added */
-@media(min-width: 900px){
+/* desktop view */
+@media(min-width: 1000px){
   .appgallery, .entreegallery, .dessertgallery {
     display: flex;
     flex-direction: row;
     /* max-width: 100%; */
   } 
   .app > div,.entree > div, .dessert >div {
-  height:53vh;
-  width: 21vw;
+  height:40vh;
+  width: 15vw;
   }
   .app,.entree,.dessert{
     margin: 0;
@@ -248,12 +248,56 @@ footer > p{
   }
   .secondpage{
     z-index:3;
-    margin-left: -20%;
+    margin-left: -11rem;
     transform: scale(0.95);
   }
   .lastpage{
     z-index: 0;
-    margin-left: -20%;
+    margin-left: -11rem;
     transform: scale(0.9);
   }
 }
+ /* tablet view  */
+
+ @media(min-width: 700px){
+  .appgallery, .entreegallery, .dessertgallery {
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    /* flex-direction: row; */
+    /* max-width: 100%; */
+  } 
+  .app > div,.entree > div, .dessert >div {
+  height:25vh;
+  width: 25vw;
+  }
+  .appgallery > :nth-child(3), .entreegallery > :nth-child(3){
+    /* display: grid; */
+    grid-column: 1/span 2;
+    grid-row: 2;
+    justify-content: center;
+    
+  }
+  .app,.entree,.dessert{
+    margin: 0;
+    margin-right: 5%;
+    
+  }
+  .activepage{
+    z-index:5;
+  }
+  .secondpage{
+    z-index:3;
+    margin-left: -11rem;
+    transform: scale(0.95);
+  }
+  .lastpage{
+    z-index: 0;
+    margin-left: -11rem;
+    transform: scale(0.9);
+  }
+  .logos > img{
+    width: 100%;
+
+  }
+ }
