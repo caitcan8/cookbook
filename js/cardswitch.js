@@ -1,18 +1,19 @@
 const thisYear = new Date().getFullYear();
 document.getElementById('year').textContent = thisYear;
 let tabPressed = false;
-let ended = true;
+
 document.addEventListener('DOMContentLoaded', () => {
     // get all the cards
     const cards = document.querySelectorAll('.app, .entree, .dessert');
     let count = 0; 
-
+    let ended = true;
     
 
     cards.forEach(meal => {
        
       // Add event listeners to each card within the set
       meal.querySelectorAll('div').forEach(card => {
+        
         // card.addEventListener('focus', () => {
         //     if(!ended){
         //         ended = true;
@@ -77,34 +78,39 @@ document.addEventListener('DOMContentLoaded', () => {
           
         // });
 
-
+        //let ended = true;
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                tabPressed = true; // Tab key was pressed
+                ended = true;
+            }
+        });
         card.addEventListener('focus', () => {
 
             if (!ended) {
                 ended = true;
                 return;
             }
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Tab') {
-                    tabPressed = true; // Tab key was pressed
-                }
-            });
-        
-            if (tabPressed && count >= 3) {
+            
+            
+            if (tabPressed && count > 2) {
                 console.log("here");
-                const allCards = Array.from(document.querySelectorAll('div'));
+                
+                const allCards = Array.from(document.querySelectorAll('.activepage, .secondpage, .lastpage'));
                 const current = document.activeElement;
                 const currentIndex = allCards.indexOf(current);
             
-                const nextCard = allCards[currentIndex + 1]; // next .activepage in DOM
+                const nextCard = allCards[currentIndex + 2]; // next .activepage in DOM
             
                 if (nextCard) {
-                    ended = false;
-                    nextCard.focus(); // move to next deck's first card
-                }
-            
-                tabPressed = false;
+                    ended = true;
+                    tabPressed = false;
                 count= 0;
+                    nextCard.focus(); // move to next deck's first card
+                    return;
+                }
+                
+                
                 return;
             }
         
@@ -133,9 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 c.innerHTML = aContent;
             }
         
-            ended = false;
+            //ended = false;
         
-            if (!(tabPressed && count >= 2)) {
+            if (!(tabPressed && count > 2)) {
+                ended = false;
                 a.focus();
             }
         

@@ -19,8 +19,20 @@ function topFunction() {
 //   document.body.scrollTop = 0; // For Safari
 //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 // found this scroll smooth myself 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if(prefersReducedMotion.matches){
+  window.scrollTo({
+    top: 0,
+    
+    
+  }); 
+}
+else{
   window.scrollTo({
     top: 0,
     behavior: 'smooth' // This makes the scroll smooth
+    
   });
+}
+  
 }

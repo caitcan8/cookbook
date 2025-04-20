@@ -9,6 +9,7 @@
   position: absolute;  
   background-color: #a8c7a8;
   color:#555555;
+  font-size: 135%;
 }
 :focus{
   border-width: 3px;
@@ -34,6 +35,9 @@ nav li{
     
     
   }
+  nav a:hover{
+    text-decoration: underline;
+  }
   /* set font */
 /* this should make the link scroll nicely  */
   html {
@@ -43,11 +47,11 @@ nav li{
 
   }
   
+  
   main img{
     max-width: 80%;
   }
-  
-
+ 
   nav{
     background-color: #a8c7a8;
     padding: 25px 0; 
@@ -236,6 +240,10 @@ footer > p{
   margin-top: 1rem;
   padding: 1rem;
 }
+#message > div > a > img:hover{
+  filter: brightness(80%);
+}
+
 
  /* tablet view  */
 
@@ -352,4 +360,22 @@ footer > p{
   .logos{
     justify-items: center;
   }
+}
+@media (prefers-reduced-motion){
+  .app > div:hover, .entree > div:hover, .dessert > div:hover {
+    transform: scale(1);
+    /* transform: translateX(-40px); */
+    transition: none;
+  }
+  .app > div:focus, .entree > div:focus, .dessert > div:focus {
+    /* transform: translateY(-40px)scale(1.1); */
+    transition: none;
+  }
+  html {
+   
+    scroll-behavior: auto;
+    
+
+  }
+  /* additional changes made in the javascript for the go to top button  */
 }
