@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Caitlin's Cookbook banner" width="100%">
+  <img src="banner.png" alt="Caitlin's Cookbook banner" width="100%">
 </p>
 
 <h3 align="center">A hand-illustrated, accessibility-first recipe site</h3>
 
 <p align="center">
-  <a href="https://caitcan8.github.io/cookbook/"><strong>🍳 View the live site »</strong></a>
+  <a href="https://caitcan8.github.io/cookbook/"><strong> View the live site »</strong></a>
 </p>
 
 ---
@@ -54,13 +54,13 @@ Or skip all of that and just visit the [live site](https://caitcan8.github.io/co
 Browse recipes by category from the navigation bar, then click into any recipe card to view full ingredients and instructions.
 
 <p align="center">
-  <img src="assets/demo-browsing.gif" alt="Browsing recipe categories on Caitlin's Cookbook" width="700">
+  <img src="gif1.gif" alt="Browsing recipe categories on Caitlin's Cookbook" width="700">
 </p>
 
 Every recipe card is fully keyboard-navigable, so you can tab through and open a recipe without ever touching a mouse.
 
 <p align="center">
-  <img src="assets/demo-recipe.gif" alt="Opening a recipe using keyboard navigation" width="700">
+  <img src="gif2.gif" alt="Opening a recipe using keyboard navigation" width="700">
 </p>
 
 ## Architecture
@@ -68,7 +68,7 @@ Every recipe card is fully keyboard-navigable, so you can tab through and open a
 The site follows a simple static-site structure: `index.html` pulls in the stylesheet, script, and assets, and the script handles rendering recipe data to the DOM while preserving accessibility.
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Architecture diagram of Caitlin's Cookbook" width="600">
+  <img src="architecture.png" alt="Architecture diagram of Caitlin's Cookbook" width="600">
 </p>
 
 ## Demo
