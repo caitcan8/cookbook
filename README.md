@@ -26,11 +26,11 @@ Accessibility was a major focus throughout the build. The site is screen-reader 
 
 ## Features
 
-- 🎨 Built from scratch with **HTML, CSS, and JavaScript**
-- ✏️ **Hand-drawn custom illustrations** for every recipe, adding personality and theming throughout
-- 📱 Fully responsive **mobile, tablet, and desktop views**
-- 🔊 **Screen-reader accessible**
-- ⌨️ **Keyboard-navigation friendly**
+- Built from scratch with **HTML, CSS, and JavaScript**
+- **Hand-drawn custom illustrations** for every recipe, adding personality and theming throughout
+- Fully responsive **mobile, tablet, and desktop views**
+- **Screen-reader accessible**
+- **Keyboard-navigation friendly**
 
 ## Quickstart
 
