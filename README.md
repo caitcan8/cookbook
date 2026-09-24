@@ -10,7 +10,7 @@
 
 ---
 
-This website showcases all of my favorite delicious recipes, organized into Appetizers, Entrees, and Desserts. It was my first personal project, and I wanted it to show off the front-end skills I'd been learning at the time — while still having a lot of personality.
+This website showcases all of my favorite delicious recipes, organized into Appetizers, Entrees, and Desserts. It was my first personal project, and I wanted it to show off the front-end skills I'd been learning at the time while still having a lot of personality.
 
 Accessibility was a major focus throughout the build. The site is screen-reader accessible, keyboard-navigation friendly, works across three different device views (mobile, tablet, and desktop), and has been tested to be free of accessibility errors (via WAVE, Axe, and other tools).
 
